@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 202, in script
+    jump scene6
+ScriptError: could not find label 'scene6'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 202, in script
+    jump scene6
+  File "C:\Users\asavi\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1698, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\asavi\Downloads\renpy-8.2.1-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'scene6'.
+
+Windows-10-10.0.19042 AMD64
+Ren'Py 8.2.1.24030407
+SafeHeart 1.0
+Sun Jun 16 19:17:09 2024

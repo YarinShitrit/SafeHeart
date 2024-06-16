@@ -5,7 +5,7 @@
 
 define maya = Character("Maya")
 define dan = Character("Dan", what_xalign=0.7)
-define rachel = Character("Rachel", what_xalign=0.7)
+define rachel = Character("Rachel, The School Counselor", what_xalign=0.7)
 
 # The game starts here.
 
@@ -27,7 +27,7 @@ label start:
 
     show maya phone
 
-    "Dan: Maya! where are you? do you want to skip class with me?"
+    "Dan: Maya! Skip class with me I need your help with something urgent"
 
     menu:
         
@@ -48,10 +48,17 @@ label skip_class:
     with fade
 
     show dan happy at right with easeinright
-    show maya surprised at left with easeinleft
+    show maya anxious at left with easeinleft
     with dissolve
 
-    maya "We should have went to class.."
+    maya "Is everything okay Dan? What do you need help with?"
+    dan "Nothing, I just didn't feel like going to class"
+    show maya surprised at left 
+    maya "I thought you needed help! We skipped class for no reason!"
+    dan "Why are you always so stressed?"
+    show dan shrug at right with easeinright
+    dan "Besides, it was your choice to do it, blame yourself for skipping class"
+    maya "You can't be serious..."
     
     jump scene2
 
@@ -74,6 +81,9 @@ label stay_class:
 
     
 label scene2:
+    scene bg nextday
+    with fade
+    pause 2.0
     scene bg lunch
     with fade
 
@@ -81,8 +91,14 @@ label scene2:
     show maya happy at left with easeinleft
     maya "Hey Dan!"
 
+    
+    dan "Hi Maya, let me look your phone messages"
     show maya scared at left
-    dan "Maya show me your phone messages"
+    maya "But that's private, it's my phone..."
+    show dan angry
+    dan "Are you hiding something? Are you cheating on me?"
+    maya "No.."
+    dan "Then show me your messages"
 
     menu:
 
@@ -101,7 +117,9 @@ label read_messages:
     with fade
     show maya scared at left
     maya "Ok.. here you have it.."
-
+    scene bg readmessage
+    with fade
+    pause 4.0
     jump scene3
 
 label refuse_to_read_messages:
@@ -114,13 +132,19 @@ label refuse_to_read_messages:
 
 
 label scene3:
+    scene bg weeklater
+    with fade
+    pause 2.0
     scene bg school_hall
     with fade
 
     show dan angry at right with easeinright
     show maya anxious at left with easeinleft
 
-    dan "Maya are you talking to other boys?!"
+    dan "Maya why were you talking to that guy?!"
+    maya "Dan please don't yell infront of everyone here..."
+    maya "He just asked me something about class"
+    dan "I won't stop yelling, I'm trying to protect you"
 
     menu:
 
@@ -135,9 +159,16 @@ label scene3:
 label apologize:
     show maya scared
     with dissolve    
-    maya "I'm sorry Dan"
+    maya "Okay okay sorry, just please stop"
+    show dan happy
+    with dissolve
+    dan "You don't get it, I'm taking care of you"
+    maya "Yelling at me like that of everyone is not protecting..."
     show dan shrug
+    pause 1.0
 
+    scene bg yellatschool
+    pause 4.0
     jump scene4
 
 label overreacting:
@@ -165,24 +196,34 @@ label scene4:
     scene bg school
     show maya phone
     with fade
-    maya "Oh Dan sent me a message"
+    maya "Dan sent me a message..."
 
-    "Dan: Maya i'm sorry about yesterday.. please give me another chance"
+    "Dan: Maya I'm sorry about yesterday.. please give me another chance, I'll be better"
+    
+    show maya scared at left with dissolve
+    pause 1.0
+    show rachel happy at right with easeinright
+    rachel "Hi Maya, I heard about yesterday with Dan"
+    maya "Yeah... but he told me that he's sorry and that he'll change"
+    rachel "Maya, Dan's behavior is a form of dating violence"
+    rachel "He's being manipulative and controlling, it might never change..."
+    rachel "You deserve a healthy relationship. And I'm here if you need my help"
+    show maya happy
+    maya "Thanks rachel, I appreciate it"
 
     menu:
         "What should Maya do?"
 
-        "Give Dan a second chance":
-
-            jump second_chance
-
         "Tell Dan she wants to break up":
             jump breakup
+
+        "Give Dan a second chance":
+            jump second_chance
         
     
 label second_chance:
     scene bg school
-    with fade
+    with dissolve
     show maya scared
     with dissolve
 
@@ -197,17 +238,19 @@ label second_chance:
 
 
 label breakup:
+    scene bg brokeup
+    pause 3.0
     scene bg school
     with fade
 
     show rachel happy at right with easeinright
     show maya sad at left with easeinleft
     rachel "Hi Maya, How have you been since the break up?"
-    maya "On one hand I'm sad, but I'm also feeling relief"
+    maya "Part of me is sad, but I'm also relieved"
     rachel "I know it's hard, but it was the right decision"
-    rachel "You deserve a loving and healthy relationship"
+    rachel "You can always come to me or to your friends for support"
     show maya happy
-    maya "Thanks rachel, I appreciate your support"
+    maya "Thanks rachel, that means a lot"
     jump scene5
 
 
