@@ -91,8 +91,8 @@ label scene2:
     show maya happy at left with easeinleft
     maya "Hey Dan!"
 
-    
-    dan "Hi Maya, let me look your phone messages"
+    dan "Hi Maya"
+    dan "Maya I want to look at your phone messages"
     show maya scared at left
     maya "But that's private, it's my phone..."
     show dan angry
@@ -174,7 +174,7 @@ label apologize:
 label overreacting:
     show maya anxious
     with dissolve
-    maya "No Dan, i'm not talking to anyone else.."
+    maya "No Dan, I'm not talking to anyone else.."
 
     show dan shrug
     dan "You know what I'm talking about.. Don't do it again"
@@ -209,7 +209,7 @@ label scene4:
     rachel "He's being manipulative and controlling, it might never change..."
     rachel "You deserve a healthy relationship. And I'm here if you need my help"
     show maya happy
-    maya "Thanks rachel, I appreciate it"
+    maya "Thanks Rachel, I appreciate it"
 
     menu:
         "What should Maya do?"
@@ -250,9 +250,8 @@ label breakup:
     rachel "I know it's hard, but it was the right decision"
     rachel "You can always come to me or to your friends for support"
     show maya happy
-    maya "Thanks rachel, that means a lot"
+    maya "Thanks Rachel, that means a lot"
     jump scene5
-
 
 label scene5:
 

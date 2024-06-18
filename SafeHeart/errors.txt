@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 51: end of line expected.
+    show maya anxious at left with easeinleft xalign 0.3
+                                              ^
+
+Ren'Py Version: Ren'Py 8.2.1.24030407
+Tue Jun 18 19:54:30 2024
